@@ -2,9 +2,8 @@ import React from 'react';
 import Layout from './components/Layout/layout';
 import Home from './Pages/HomePage';
 import ProductPage from './Pages/ProductsPage'; 
-import { Routes, Route } from 'react-router-dom';
 import ShoppingCart from './Pages/Shoppingcart';
-
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
