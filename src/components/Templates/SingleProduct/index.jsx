@@ -50,17 +50,22 @@ function SingleProductPage() {
     // console.log("WWW", `${apiUrl}` + id)
 
     const handleAddToCart = () => {
-        const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
-        currentCart.push(id);
-        localStorage.setItem('cart', JSON.stringify(currentCart));
+        try {
+            const currentCart = JSON.parse(localStorage.getItem('cart')) || []; // Use empty array if undefined
+            currentCart.push(id); 
+            localStorage.setItem('cart', JSON.stringify(currentCart)); // Save updated cart back to localStorage
     
-        window.dispatchEvent(new Event('cartUpdated'));
+            window.dispatchEvent(new Event('cartUpdated'));
     
-        setNotification(`"${products.title}" is added to cart`);
+            setNotification(`"${products.title}" is added to cart`);
     
-        setTimeout(() => {
-            setNotification('');
-        }, 3000);
+            setTimeout(() => {
+                setNotification('');
+            }, 3000);
+        } catch (error) {
+            console.error('Error updating cart:', error);
+            setNotification('Failed to add product to cart. Please try again.');
+        }
     };
     
     return(
