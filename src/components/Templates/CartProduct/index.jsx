@@ -1,6 +1,5 @@
 import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import QuantityButtons from "../../QuantityCounter";
 
 function CartItemsTemplate({ products, onRemove }) {
     return (
@@ -20,7 +19,6 @@ function CartItemsTemplate({ products, onRemove }) {
                         <h2 className="truncate">{products.title || "Untitled Product"}</h2>
                     </Link>
                     <div>
-                        <QuantityButtons />
                     </div>
                 </div>
                
