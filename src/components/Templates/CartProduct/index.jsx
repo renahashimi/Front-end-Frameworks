@@ -1,30 +1,41 @@
-import React from 'react';
+import React from "react";
 import { FaTrash } from "react-icons/fa";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-function CartItemsTemplate({ products, onRemove }) {
+function CartItemsTemplate({ products, onRemove, onIncrease, onDecrease }) {
     return (
         <div key={products.id} className="container block my-2">
             <div className="cart-item flex justify-between w-full border-2 border-custom-light">
-                {/* Product Image */}
                 <Link to={`/product/${products.id}`} className="flex-none w-1/6">
                     <img 
                         src={products.image?.url} 
                         alt={products.title || "Product Image"} 
-                        className="w-[50px] h-[50px] object-cover"
+                        className="w-[60px] h-[60px] object-cover"
                     />
                 </Link>
-                {/* Product Title */}
-                <div className="block">
-                    <Link to={`/product/${products.id}`} className="flex-grow w-3/5 mb-5 ms-2 justify-right text-xs sm:text-lg text-left flex-wrap">
-                        <h2 className="truncate">{products.title || "Untitled Product"}</h2>
+                <div className="block m-1 w-2/6 sm:-ms-5">
+                    <Link to={`/product/${products.id}`} className="flex items-center w-full">
+                        <h2 className="cart-title text-sm font-taviraj font-bold break-words w-full text-left md:text-lg overflow-hidden text-ellipsis whitespace-nowrap">
+                            {products.title || "Untitled Product"}
+                        </h2>
                     </Link>
-                    <div>
+                    <div className="flex items-center w-full text-left mt-1">    
+                        <p className="font-medium text-xs sm:text-base me-2">Quantity:</p>         
+                        <div className="font-medium text-xs sm:text-base flex">
+                            <AiOutlineMinus 
+                                className="flex justify-center items-center w-4 h-4 sm:w-5 sm:h-5 border-2 border-custom-dark rounded-full cursor-pointer mr-1 mt-0.5" 
+                                onClick={() => onDecrease(products.id)}
+                            />
+                            <span className="font-semibold mt-0.5 sm:mt-0 px-1">{products.quantity}</span>
+                            <AiOutlinePlus 
+                                className="flex justify-center items-center  w-4 h-4 sm:w-5 sm:h-5 border-2 border-custom-dark rounded-full cursor-pointer ml-1 mt-0.5" 
+                                onClick={() => onIncrease(products.id)}
+                            />
+                        </div>     
                     </div>
                 </div>
-               
-                {/* Product Price */}
-                <div className="flex-none w-1/4 cart-price text-right">
+                <div className="flex-none font-taviraj w-1/4 cart-price text-right mt-2">
                     {products.discountedPrice && products.discountedPrice < products.price ? (
                         <>
                             <p className="font-bold text-xs sm:text-base text-custom-sale">
@@ -40,12 +51,11 @@ function CartItemsTemplate({ products, onRemove }) {
                         </p>
                     )}
                 </div>
-                {/* Remove Button */}
                 <button 
-                    className="flex-none w-auto text-custom-deep bg-custom-light rounded-md px-3 py-1 ms-3 hover:bg-custom-light flex items-center justify-center"
+                    className="flex-none w-auto text-custom-deep bg-custom-light p-0 ms-2 hover:bg-custom-light flex items-center justify-center"
                     onClick={() => onRemove(products.id)}
                 >
-                    <FaTrash className="mr-2" />
+                    <FaTrash className="text-xl mr-2 ps-2" />
                 </button>
             </div>
         </div>
