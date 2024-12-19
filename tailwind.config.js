@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./index.html",
     "./src/**/*.{html,js,jsx,ts,tsx}", 
   ],
   theme: {
@@ -9,6 +10,7 @@ module.exports = {
         taviraj: ['Taviraj', 'serif'],
         rokkitt: ['Rokkitt', 'serif'],
         marcellus: ['Marcellus SC', 'serif'],
+        advent: ['Advent Pro', 'serif'],  
       },
       fontWeight: {
         thin: 100,
@@ -22,11 +24,11 @@ module.exports = {
         black: 900,
       },
       colors: {
-        'custom-light': '#F2EDE8',
-        'custom-medium': '#E1D5C8',
-        'custom-dark': '#9E7B58',
-        'custom-deep': '#6B4D35',
-        'custom-sale': '#B64961',
+        'custom-light': '#E0DDDC',
+        'custom-medium': '#998E8A',
+        'custom-dark': '#655B58',
+        'custom-deep': '#4A4340',
+        'custom-sale': '#B23227',
       },
       spacing: {
         100: '100px',
