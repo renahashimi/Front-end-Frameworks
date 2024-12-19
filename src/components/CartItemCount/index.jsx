@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function CartItemsCount() {
     const [cartCount, setCartCount] = useState(0);
@@ -8,7 +8,6 @@ function CartItemsCount() {
             const cart = JSON.parse(localStorage.getItem("cart")) || [];
             setCartCount(cart.length);
         };
-        
 
         updateCartCount();
 
@@ -17,13 +16,9 @@ function CartItemsCount() {
         return () => {
             window.removeEventListener('cartUpdated', updateCartCount);
         };
-    }, []);
+    }, []); 
 
-    return (
-        <span className="cart-count">
-            {cartCount}
-        </span>
-    );
+    return <span className="cart-count">{cartCount}</span>;
 }
 
 export default CartItemsCount;
