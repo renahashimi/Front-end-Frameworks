@@ -30,7 +30,7 @@ function HomePage() {
             </div>
             <div className="block m-auto mt-2 w-[75%] md:w-full text-center">
                 <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-                <p className="m-auto mb-3 p-3 text-xs md:text-lg font-advent font-semibold -mt-5">- Start your adventure here and explore the finest collections curated for your unique tastes.</p>
+                <p className="m-auto mb-3 p-3 text-sm sm:text-lg font-advent font-semibold -mt-5">- Start your adventure here and explore the finest collections curated for your unique tastes.</p>
             </div>
             <div className="max-w-[1200px] row m-auto justify-center">
                 <ProductsList products={filteredProducts} />
