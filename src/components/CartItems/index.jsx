@@ -91,18 +91,20 @@ function ShoppingCart() {
     const decreaseQuantity = (productId) => {
         let cartItemIds = JSON.parse(localStorage.getItem("cart")) || [];
         
-        setCartItems(prevItems => {
-            return prevItems.map(item => {
-                if (item.id === productId) {
-                    if (item.quantity > 1) {
-                        item.quantity -= 1;
-                        cartItemIds = cartItemIds.filter(id => id !== productId);
-                        localStorage.setItem("cart", JSON.stringify(cartItemIds));
-                    }
+        const updatedCartItems = cartItems.map(item => {
+            if (item.id === productId && item.quantity > 1) {
+                item.quantity -= 1;
+    
+                const index = cartItemIds.indexOf(productId);
+                if (index !== -1) {
+                    cartItemIds.splice(index, 1);
                 }
-                return item;
-            });
+            }
+            return item;
         });
+    
+        localStorage.setItem("cart", JSON.stringify(cartItemIds));
+        setCartItems(updatedCartItems);
     
         window.dispatchEvent(new Event('cartUpdated'));
     };
