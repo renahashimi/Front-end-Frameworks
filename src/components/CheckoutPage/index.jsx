@@ -19,7 +19,7 @@ function CheckoutSuccess() {
                 </p>
                 <h2 className="font-rokkitt font-bold w-full bg-custom-light text-custom-deep my-5 mx-0 pt-10 pb-5 px-4 uppercase">Your order is placed successfully!</h2>
             </div>
-            <div className="font-rokkitt text-center mt-4 p-2 text-sm text-custom-dark">
+            <div className="font-rokkitt text-center mt-4 p-2 text-sm md:text-lg text-custom-dark">
                 <p>
                     Thank you for your purchase.
                 </p>
@@ -27,7 +27,7 @@ function CheckoutSuccess() {
                     You will shortly receive an email with order details.
                 </p>
             </div>
-            <div className="flex mt-6 m-auto justify-center underline uppercase font-advent font-bold text-custom-deep">
+            <div className="flex mt-6 m-auto md:text-xl justify-center underline uppercase font-advent font-bold text-custom-deep">
                 <Link to="/">Go back to Homepage</Link>
             </div>
         </div>
