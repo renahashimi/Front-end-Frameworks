@@ -82,7 +82,7 @@ function ProductItem({ product }) {
                                     </p>
                                 )}
                             </div>
-                            <p className="flex mt-3 me-1 text-m text-center text-custom-deep font-bold bg-white border-2 border-custom-light w-[60px] h-[25px] px-1 p-0 rounded">
+                            <p className="flex mt-3 me-1 text-m text-center text-custom-deep font-bold bg-white border-2 border-custom-light w-[50px] h-[30px] px-1 p-0 rounded">
                                 <span className='text-yellow-400 pe-1'>{'★'} </span>
                                 {product.rating || '-'}
                             </p>

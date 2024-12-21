@@ -86,7 +86,7 @@ function SingleProductPage() {
                     {notification && <Notification>{notification}</Notification>}
                 </div>
 
-                <div className="block mt-4 w-[300px]">
+                <div className="block mt-4 md:w-[300px]">
                     <h2 className="card-title font-taviraj text-custom-deep border-b-2 border-custom-light text-xl md:text-3xl md:font-extrabold uppercase mx-3">
                         {products.title || 'Product Name'}
                     </h2>
@@ -113,7 +113,7 @@ function SingleProductPage() {
                             <span className="text-xs ml-1 relative" style={{ top: '-2px' }}>({products.reviews?.length || 0})</span>                             
                         </p>
                     </div>
-                    <div className="font-advent mt-5 text-sm my-5 p-3 shadow-sm">
+                    <div className="font-advent text-sm mb-3 p-3 shadow-sm">
                         <p className="font-extrabold text-custom-deep text-l uppercase my-3">Description</p>
                         <p className="text-gray-700 font-semibold -mt-2 mb-4">{products.description || 'No description available'}</p>
 
@@ -139,7 +139,7 @@ function SingleProductPage() {
                 <h3 className="text-lg uppercase font-bold bg-custom-deep text-white font-taviraj font-semibold p-2">
                     Product Reviews
                 </h3>
-                <div className="review-card w-full shadow-lg mt-5 px-2">
+                <div className="review-card w-full shadow-lg my-5 px-2 pb-2">
                     {products.reviews && products.reviews.length > 0 ? (
                         products.reviews.map((review) => (
                             <div key={review.id} className="review-item mb-2 p-2 border-b border-gray-200 bg-custom-light">
