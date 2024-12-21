@@ -8,7 +8,7 @@ function ProductsList({ products }) {
                 <div>No products found.</div>
             ) : (
                 products.map(product => (
-                    <div key={product.id} className="w-full sm:w-1/3 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-6">
+                    <div key={product.id} className="w-full sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/5 mb-6">
                         <ProductItem product={product} />
                     </div>
                 ))
