@@ -20,11 +20,6 @@ function HomePage() {
     
     return (
         <div className="container max-w-[1400px] mt-[60px] bg-custom-light">
-            {/* <div className="text-center my-2 w-full mt-[30px] shadow-lg">
-                <h1 className="font-rokkitt font-extrabold text-custom-deep bg-custom-deep text-custom-light w-full uppercase  py-5 sm:text-2xl">
-                    Welcome to Lunaura
-                </h1>
-            </div> */}
             <div className="mt-[20px]">
                 <HomePageBanner />
             </div>
