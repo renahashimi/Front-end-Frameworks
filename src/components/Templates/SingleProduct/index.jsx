@@ -74,7 +74,7 @@ function SingleProductPage() {
                             <img 
                                 src={products.image.url}
                                 alt={products.title || 'Product Image'}  
-                                className="card-single-img w-full max-w-[500px] md:w-[300px] h-[400px] object-cover"
+                                className="card-single-img w-full max-w-[500px] lg:w-[300px] h-[400px] object-cover"
                             />
                         )}
                         <CalculateDiscount 
@@ -86,7 +86,7 @@ function SingleProductPage() {
                     {notification && <Notification>{notification}</Notification>}
                 </div>
 
-                <div className="block mt-4 md:w-[300px]">
+                <div className="block mt-4 md:w-[400px]">
                     <h2 className="card-title font-taviraj text-custom-deep border-b-2 border-custom-light text-xl md:text-3xl md:font-extrabold uppercase mx-3">
                         {products.title || 'Product Name'}
                     </h2>

@@ -27,7 +27,7 @@ function CalculateDiscount({ originalPrice, discountedPrice, products }) {
                 className={`${
                     isHomePage || isAllProducts || isShoppingCart
                         ? "absolute top-0 right-0 bg-custom-dark text-white fixed px-3 py-1"
-                        : "absolute top-6 right-7 bg-custom-deep text-white font-bold py-1 transform -rotate-45 overflow-hidden w-[150%]"
+                        : "absolute top-6 right-10 bg-custom-deep text-white font-bold py-1 transform -rotate-45 overflow-hidden w-[150%]"
                 } font-bold`}
             >
                 <div className="text-center w-full">
