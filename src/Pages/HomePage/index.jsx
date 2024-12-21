@@ -20,17 +20,17 @@ function HomePage() {
     
     return (
         <div className="container max-w-[1400px] mt-[60px] bg-custom-light">
-            <div className="text-center my-2 w-full mt-[30px] shadow-lg">
+            {/* <div className="text-center my-2 w-full mt-[30px] shadow-lg">
                 <h1 className="font-rokkitt font-extrabold text-custom-deep bg-custom-deep text-custom-light w-full uppercase  py-5 sm:text-2xl">
                     Welcome to Lunaura
                 </h1>
-            </div>
-            <div>
+            </div> */}
+            <div className="mt-[20px]">
                 <HomePageBanner />
             </div>
-            <div className="max-w-[1200px] row m-auto justify-center mt-5">
+            <div className="max-w-[1200px] mt-[30px] row m-auto justify-center mt-5">
                 <h2 className="row flex font-taviraj text-xl  md:text-4xl md:mt-7 justify-center uppercase">
-                        All Products
+                Discover Lunaura
                 </h2>
             </div>
             <div className="block m-auto mt-2 w-[75%] md:w-full text-center">
