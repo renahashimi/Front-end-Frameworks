@@ -106,8 +106,8 @@ function ContactPage() {
             <div className="-mt-12 p-0 md:bg-[url('/src/images/contact.jpg')] lg:bg-cover lg:bg-center lg:bg-no-repeat bg-white">
                 <h1 className="font-taviraj font-semibold text-custom-deep md:text-custom-light text-2xl md:text-4xl text-center lg:text-start my-4 lg:ms-[100px] lg:my-[50px] uppercase pt-20 text-2xl">Contact Us</h1>
                 <div className="flex md:flex lg:justify-start md:m-[20px] lg:ms-[90px] items-center justify-center mt-6">
-                    <div className="w-full max-w-md">
-                        {submitted && <p className="success-message text-custum-deep md:text-custom-light text-center text-xl border-4 border-custom-deep md:border-custom-medium mb-4 mx-2 py-2">Thank you! Your message has been sent.</p>}
+                    <div className="w-full max-w-md p-2">
+                        {submitted && <p className="success-message font-rokkitt text-custum-deep md:text-custom-light text-center text-2xl md:text-3xl border-4 border-custom-deep md:border-custom-medium mb-4 mx-2 py-2 md:px-6">Thank you! Your message has been sent.</p>}
                         <div className="container mx-auto">
                             <form onSubmit={handleSubmit} noValidate className="font-rokkitt text-left bg-custom-light p-6 w-full mb-[100px] bg-opacity-95">
                                 <div className="form-group py-3 w-full">
